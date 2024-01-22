@@ -1,0 +1,760 @@
+Overal, the majority of time in a loop is spent on the model making a prediction. The resizing and preprocessing of a frame took a comparatively negligible amount of time. The frame being shown through the imshow() function also caused very little difference in total time when compared to a loop that does not use it. The typical range of values observed is around 0.30-0.41 seconds, but there are a few outliers that are around 0.28-0.44 seconds.
+
+Performance Time for Model Making Predictions on Live Frames (Using imshow() Function):
+
+Total time for whole loop: 0.33927070000208914 seconds
+Total time between frame received and prediction: 0.0012904000468552113 seconds
+Total time for model to make a prediction: 0.33337859995663166 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3577274000272155 seconds
+Total time between frame received and prediction: 0.0016896999441087246 seconds
+Total time for model to make a prediction: 0.35189699998591095 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.359846799983643 seconds
+Total time between frame received and prediction: 0.0013476000167429447 seconds
+Total time for model to make a prediction: 0.3551875998964533 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3562077999813482 seconds
+Total time between frame received and prediction: 0.0013911999994888902 seconds
+Total time for model to make a prediction: 0.35181480005849153 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3783357000211254 seconds
+Total time between frame received and prediction: 0.0018782999832183123 seconds
+Total time for model to make a prediction: 0.37314090004656464 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.37705520004965365 seconds
+Total time between frame received and prediction: 0.0012344999704509974 seconds
+Total time for model to make a prediction: 0.3719941000454128 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3717305000172928 seconds
+Total time between frame received and prediction: 0.001123800058849156 seconds
+Total time for model to make a prediction: 0.3677412000251934 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3663821999216452 seconds
+Total time between frame received and prediction: 0.0010310000507161021 seconds
+Total time for model to make a prediction: 0.3617909998865798 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3488170000491664 seconds
+Total time between frame received and prediction: 0.0011247000657022 seconds
+Total time for model to make a prediction: 0.34386859997175634 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.34787639998830855 seconds
+Total time between frame received and prediction: 0.00121779995970428 seconds
+Total time for model to make a prediction: 0.3438072999706492 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3387770000845194 seconds
+Total time between frame received and prediction: 0.0018010000931099057 seconds
+Total time for model to make a prediction: 0.3343724000733346 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3510266999946907 seconds
+Total time between frame received and prediction: 0.0012869000202044845 seconds
+Total time for model to make a prediction: 0.34693569992668927 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.4019418000243604 seconds
+Total time between frame received and prediction: 0.000964700011536479 seconds
+Total time for model to make a prediction: 0.39750089996960014 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.39416900009382516 seconds
+Total time between frame received and prediction: 0.001888900063931942 seconds
+Total time for model to make a prediction: 0.389168499968946 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3755543000297621 seconds
+Total time between frame received and prediction: 0.0013897999888285995 seconds
+Total time for model to make a prediction: 0.3712948999600485 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3934100999031216 seconds
+Total time between frame received and prediction: 0.001625700038857758 seconds
+Total time for model to make a prediction: 0.3887014000210911 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.40849629999138415 seconds
+Total time between frame received and prediction: 0.0019805000629276037 seconds
+Total time for model to make a prediction: 0.4039320999290794 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.40577219997067004 seconds
+Total time between frame received and prediction: 0.001269000000320375 seconds
+Total time for model to make a prediction: 0.40143610001541674 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.37933719996362925 seconds
+Total time between frame received and prediction: 0.0013132999883964658 seconds
+Total time for model to make a prediction: 0.3750039000296965 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3050589000340551 seconds
+Total time between frame received and prediction: 0.0017805000534281135 seconds
+Total time for model to make a prediction: 0.2995765000814572 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.30223729996941984 seconds
+Total time between frame received and prediction: 0.0011562000727280974 seconds
+Total time for model to make a prediction: 0.29811490001156926 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3213274000445381 seconds
+Total time between frame received and prediction: 0.0011275000870227814 seconds
+Total time for model to make a prediction: 0.3163420999189839 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3259013999486342 seconds
+Total time between frame received and prediction: 0.0010547999991104007 seconds
+Total time for model to make a prediction: 0.32203979999758303 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.31585299992002547 seconds
+Total time between frame received and prediction: 0.0014028000878170133 seconds
+Total time for model to make a prediction: 0.3100657000904903 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.32784659997560084 seconds
+Total time between frame received and prediction: 0.001022700103931129 seconds
+Total time for model to make a prediction: 0.32220160006545484 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3176414999179542 seconds
+Total time between frame received and prediction: 0.0009318999946117401 seconds
+Total time for model to make a prediction: 0.3133328999392688 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.30316300003323704 seconds
+Total time between frame received and prediction: 0.001352700055576861 seconds
+Total time for model to make a prediction: 0.298306200071238 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3137418999103829 seconds
+Total time between frame received and prediction: 0.0009142999770119786 seconds
+Total time for model to make a prediction: 0.3108896999619901 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3194724000059068 seconds
+Total time between frame received and prediction: 0.0009261000668630004 seconds
+Total time for model to make a prediction: 0.3159019999438897 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.32118570001330227 seconds
+Total time between frame received and prediction: 0.0010321999434381723 seconds
+Total time for model to make a prediction: 0.3174422000302002 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3110975999152288 seconds
+Total time between frame received and prediction: 0.0008840999798849225 seconds
+Total time for model to make a prediction: 0.30697119992692024 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3073988000396639 seconds
+Total time between frame received and prediction: 0.001231999951414764 seconds
+Total time for model to make a prediction: 0.30309860000852495 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.31831620004959404 seconds
+Total time between frame received and prediction: 0.0009344000136479735 seconds
+Total time for model to make a prediction: 0.31460849998984486 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.29987870005425066 seconds
+Total time between frame received and prediction: 0.0009948000079020858 seconds
+Total time for model to make a prediction: 0.2954783000750467 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3191643999889493 seconds
+Total time between frame received and prediction: 0.0009099000599235296 seconds
+Total time for model to make a prediction: 0.31538479996379465 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3216851999750361 seconds
+Total time between frame received and prediction: 0.0018263000529259443 seconds
+Total time for model to make a prediction: 0.3164532999508083 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.32553639996331185 seconds
+Total time between frame received and prediction: 0.0011065000435337424 seconds
+Total time for model to make a prediction: 0.3210871999617666 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.32310159993357956 seconds
+Total time between frame received and prediction: 0.0009777999948710203 seconds
+Total time for model to make a prediction: 0.3196809000801295 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3142109999898821 seconds
+Total time between frame received and prediction: 0.0012209999840706587 seconds
+Total time for model to make a prediction: 0.3103623999049887 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.32794849993661046 seconds
+Total time between frame received and prediction: 0.0012851000064983964 seconds
+Total time for model to make a prediction: 0.3231385999824852 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.33302480005659163 seconds
+Total time between frame received and prediction: 0.0011031999019905925 seconds
+Total time for model to make a prediction: 0.3289588000625372 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3082605000818148 seconds
+Total time between frame received and prediction: 0.0011388000566512346 seconds
+Total time for model to make a prediction: 0.3033989000832662 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3255713999969885 seconds
+Total time between frame received and prediction: 0.0008962999563664198 seconds
+Total time for model to make a prediction: 0.32218679995276034 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3179574999958277 seconds
+Total time between frame received and prediction: 0.0008955999510362744 seconds
+Total time for model to make a prediction: 0.31458180001936853 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.31359630008228123 seconds
+Total time between frame received and prediction: 0.0011886999709531665 seconds
+Total time for model to make a prediction: 0.30948100006207824 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.30434269993565977 seconds
+Total time between frame received and prediction: 0.001173800090327859 seconds
+Total time for model to make a prediction: 0.29968840000219643 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.31124609999824315 seconds
+Total time between frame received and prediction: 0.0009166999952867627 seconds
+Total time for model to make a prediction: 0.30698500003200024 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3203496999340132 seconds
+Total time between frame received and prediction: 0.001221999991685152 seconds
+Total time for model to make a prediction: 0.3154902000678703 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.30892570002470165 seconds
+Total time between frame received and prediction: 0.0010641999542713165 seconds
+Total time for model to make a prediction: 0.30436559999361634 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.32605290005449206 seconds
+Total time between frame received and prediction: 0.0011190000222995877 seconds
+Total time for model to make a prediction: 0.3211379999993369 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.35885209997650236 seconds
+Total time between frame received and prediction: 0.001291800057515502 seconds
+Total time for model to make a prediction: 0.35417309997137636 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3412170000374317 seconds
+Total time between frame received and prediction: 0.001208100002259016 seconds
+Total time for model to make a prediction: 0.3369388999417424 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3413212999003008 seconds
+Total time between frame received and prediction: 0.0012338999658823013 seconds
+Total time for model to make a prediction: 0.33681470004376024 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3559817000059411 seconds
+Total time between frame received and prediction: 0.0011628000065684319 seconds
+Total time for model to make a prediction: 0.3514539999887347 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.34056640008930117 seconds
+Total time between frame received and prediction: 0.0014069000026211143 seconds
+Total time for model to make a prediction: 0.33525680005550385 seconds
+Model Prediction: [0.]
+
+Performance Time for Model Making Predictions on Live Frames (Not Using imshow() Function):
+
+Total time for whole loop: 0.3233439999166876 seconds
+Total time between frame received and prediction: 0.0010993999894708395 seconds
+Total time for model to make a prediction: 0.3193520000204444 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.33392239990644157 seconds
+Total time between frame received and prediction: 0.001142699969932437 seconds
+Total time for model to make a prediction: 0.3295987999299541 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.32779070001561195 seconds
+Total time between frame received and prediction: 0.0010604000417515635 seconds
+Total time for model to make a prediction: 0.3245269999606535 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3125733999768272 seconds
+Total time between frame received and prediction: 0.0011433999752625823 seconds
+Total time for model to make a prediction: 0.3082987000234425 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3256552000530064 seconds
+Total time between frame received and prediction: 0.0014393000165000558 seconds
+Total time for model to make a prediction: 0.3208955000154674 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.31366529990918934 seconds
+Total time between frame received and prediction: 0.0015411999775096774 seconds
+Total time for model to make a prediction: 0.30893300008028746 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.45117249991744757 seconds
+Total time between frame received and prediction: 0.0009622999932616949 seconds
+Total time for model to make a prediction: 0.44677189993672073 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.2980431999312714 seconds
+Total time between frame received and prediction: 0.0011847999412566423 seconds
+Total time for model to make a prediction: 0.29364689998328686 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.31425559998024255 seconds
+Total time between frame received and prediction: 0.001246000058017671 seconds
+Total time for model to make a prediction: 0.30943149991799146 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3470246000215411 seconds
+Total time between frame received and prediction: 0.001075600041076541 seconds
+Total time for model to make a prediction: 0.3426168999867514 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.32127979991491884 seconds
+Total time between frame received and prediction: 0.001095999963581562 seconds
+Total time for model to make a prediction: 0.3168061999604106 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3337622999679297 seconds
+Total time between frame received and prediction: 0.0008705999935045838 seconds
+Total time for model to make a prediction: 0.3298056999919936 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.34116630000062287 seconds
+Total time between frame received and prediction: 0.0008843999821692705 seconds
+Total time for model to make a prediction: 0.33596629998646677 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3193362000165507 seconds
+Total time between frame received and prediction: 0.001208400004543364 seconds
+Total time for model to make a prediction: 0.31576330005191267 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.32091790006961673 seconds
+Total time between frame received and prediction: 0.0016828000079840422 seconds
+Total time for model to make a prediction: 0.31511890003457665 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.37250260007567704 seconds
+Total time between frame received and prediction: 0.0012851000064983964 seconds
+Total time for model to make a prediction: 0.36765390005894005 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.349484899896197 seconds
+Total time between frame received and prediction: 0.0012011999497190118 seconds
+Total time for model to make a prediction: 0.3448910000734031 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.30636399996001273 seconds
+Total time between frame received and prediction: 0.0008843999821692705 seconds
+Total time for model to make a prediction: 0.30225319997407496 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.31479059997946024 seconds
+Total time between frame received and prediction: 0.0009075000416487455 seconds
+Total time for model to make a prediction: 0.31129730003885925 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3339158999733627 seconds
+Total time between frame received and prediction: 0.0010607000440359116 seconds
+Total time for model to make a prediction: 0.32651459996122867 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3231072999769822 seconds
+Total time between frame received and prediction: 0.0011671000393107533 seconds
+Total time for model to make a prediction: 0.31713760003913194 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3318073000991717 seconds
+Total time between frame received and prediction: 0.0010004999348893762 seconds
+Total time for model to make a prediction: 0.32707820006180555 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3210469998884946 seconds
+Total time between frame received and prediction: 0.0011255999561399221 seconds
+Total time for model to make a prediction: 0.31671400007326156 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3290517999557778 seconds
+Total time between frame received and prediction: 0.0011061999248340726 seconds
+Total time for model to make a prediction: 0.3251739999977872 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3245677000377327 seconds
+Total time between frame received and prediction: 0.0010409000096842647 seconds
+Total time for model to make a prediction: 0.3209535999922082 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3194297000300139 seconds
+Total time between frame received and prediction: 0.0014857999049127102 seconds
+Total time for model to make a prediction: 0.31524190003983676 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.32914919999893755 seconds
+Total time between frame received and prediction: 0.0011843000538647175 seconds
+Total time for model to make a prediction: 0.3245478000026196 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3876494000433013 seconds
+Total time between frame received and prediction: 0.0008775999303907156 seconds
+Total time for model to make a prediction: 0.3842110000550747 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.38638350006658584 seconds
+Total time between frame received and prediction: 0.00127399992197752 seconds
+Total time for model to make a prediction: 0.3822324000066146 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.39900859992485493 seconds
+Total time between frame received and prediction: 0.0012208000989630818 seconds
+Total time for model to make a prediction: 0.3945102000143379 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.39426329999696463 seconds
+Total time between frame received and prediction: 0.0012270999141037464 seconds
+Total time for model to make a prediction: 0.3896724000805989 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3989397999830544 seconds
+Total time between frame received and prediction: 0.0011542999418452382 seconds
+Total time for model to make a prediction: 0.39464670000597835 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3575910000363365 seconds
+Total time between frame received and prediction: 0.0013225000584498048 seconds
+Total time for model to make a prediction: 0.35354309994727373 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3695144000230357 seconds
+Total time between frame received and prediction: 0.0009932999964803457 seconds
+Total time for model to make a prediction: 0.3654045999282971 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.34554520004894584 seconds
+Total time between frame received and prediction: 0.001221699989400804 seconds
+Total time for model to make a prediction: 0.3408748999936506 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.374130200012587 seconds
+Total time between frame received and prediction: 0.001123800058849156 seconds
+Total time for model to make a prediction: 0.3703916999511421 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.33087479998357594 seconds
+Total time between frame received and prediction: 0.0012242000084370375 seconds
+Total time for model to make a prediction: 0.3260814000386745 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.319634500076063 seconds
+Total time between frame received and prediction: 0.0011746000964194536 seconds
+Total time for model to make a prediction: 0.3160551000619307 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3516105000162497 seconds
+Total time between frame received and prediction: 0.0011383999371901155 seconds
+Total time for model to make a prediction: 0.34826890006661415 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.34234119998291135 seconds
+Total time between frame received and prediction: 0.00199859996791929 seconds
+Total time for model to make a prediction: 0.3365525999106467 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.40805169998202473 seconds
+Total time between frame received and prediction: 0.0012220999924466014 seconds
+Total time for model to make a prediction: 0.40343800000846386 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3475500999484211 seconds
+Total time between frame received and prediction: 0.0017624999163672328 seconds
+Total time for model to make a prediction: 0.34318049997091293 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3590907999314368 seconds
+Total time between frame received and prediction: 0.001353900064714253 seconds
+Total time for model to make a prediction: 0.35515919991303235 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3673776000505313 seconds
+Total time between frame received and prediction: 0.0012289000442251563 seconds
+Total time for model to make a prediction: 0.3627216999884695 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3594320999691263 seconds
+Total time between frame received and prediction: 0.0022537000477313995 seconds
+Total time for model to make a prediction: 0.35315979993902147 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3567944000242278 seconds
+Total time between frame received and prediction: 0.002006600028835237 seconds
+Total time for model to make a prediction: 0.3510833999607712 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3792247000383213 seconds
+Total time between frame received and prediction: 0.0012684999965131283 seconds
+Total time for model to make a prediction: 0.3754851999692619 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3600976000307128 seconds
+Total time between frame received and prediction: 0.0013857000740244985 seconds
+Total time for model to make a prediction: 0.35623309994116426 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3520432999357581 seconds
+Total time between frame received and prediction: 0.001395300030708313 seconds
+Total time for model to make a prediction: 0.34802960010711104 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.41150339995510876 seconds
+Total time between frame received and prediction: 0.00114949990529567 seconds
+Total time for model to make a prediction: 0.4078700999962166 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3786412999033928 seconds
+Total time between frame received and prediction: 0.0011634000111371279 seconds
+Total time for model to make a prediction: 0.3742863000370562 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3564745000330731 seconds
+Total time between frame received and prediction: 0.0016359000001102686 seconds
+Total time for model to make a prediction: 0.3525654000695795 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3500804000068456 seconds
+Total time between frame received and prediction: 0.0008813000749796629 seconds
+Total time for model to make a prediction: 0.34599349997006357 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.347618900006637 seconds
+Total time between frame received and prediction: 0.0011616999981924891 seconds
+Total time for model to make a prediction: 0.34334759996272624 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.36389009992126375 seconds
+Total time between frame received and prediction: 0.0009725999552756548 seconds
+Total time for model to make a prediction: 0.3592307000653818 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.35111259995028377 seconds
+Total time between frame received and prediction: 0.0011965999146923423 seconds
+Total time for model to make a prediction: 0.34692809998523444 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3698566999519244 seconds
+Total time between frame received and prediction: 0.001581600052304566 seconds
+Total time for model to make a prediction: 0.3648372999159619 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.40426920005120337 seconds
+Total time between frame received and prediction: 0.0018770999740809202 seconds
+Total time for model to make a prediction: 0.39895029994659126 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.35819039994385093 seconds
+Total time between frame received and prediction: 0.0011980999261140823 seconds
+Total time for model to make a prediction: 0.3538511999649927 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3683473999844864 seconds
+Total time between frame received and prediction: 0.0011357000330463052 seconds
+Total time for model to make a prediction: 0.3637868999503553 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3718832000158727 seconds
+Total time between frame received and prediction: 0.0010769000509753823 seconds
+Total time for model to make a prediction: 0.36779479996766895 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.34092089999467134 seconds
+Total time between frame received and prediction: 0.0011067999294027686 seconds
+Total time for model to make a prediction: 0.3362734999973327 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3203781000338495 seconds
+Total time between frame received and prediction: 0.0012799999676644802 seconds
+Total time for model to make a prediction: 0.3158873999491334 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3333715000189841 seconds
+Total time between frame received and prediction: 0.0016995000187307596 seconds
+Total time for model to make a prediction: 0.3284347999142483 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.35601470002438873 seconds
+Total time between frame received and prediction: 0.0010590000310912728 seconds
+Total time for model to make a prediction: 0.3516257000155747 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3859322000062093 seconds
+Total time between frame received and prediction: 0.0016874000430107117 seconds
+Total time for model to make a prediction: 0.38051800010725856 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3308124999748543 seconds
+Total time between frame received and prediction: 0.0015482999151572585 seconds
+Total time for model to make a prediction: 0.3254949999973178 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.34167850005906075 seconds
+Total time between frame received and prediction: 0.0010093000018969178 seconds
+Total time for model to make a prediction: 0.337411200045608 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.32977509999182075 seconds
+Total time between frame received and prediction: 0.0011499000247567892 seconds
+Total time for model to make a prediction: 0.326237199944444 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.309219199931249 seconds
+Total time between frame received and prediction: 0.0010101000079885125 seconds
+Total time for model to make a prediction: 0.30496429989580065 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.37736419995781034 seconds
+Total time between frame received and prediction: 0.0012528999941423535 seconds
+Total time for model to make a prediction: 0.3738850000081584 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3726495000300929 seconds
+Total time between frame received and prediction: 0.0015739999944344163 seconds
+Total time for model to make a prediction: 0.3681650999933481 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.38592879998032004 seconds
+Total time between frame received and prediction: 0.0016033999854698777 seconds
+Total time for model to make a prediction: 0.3806805000640452 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3911843999521807 seconds
+Total time between frame received and prediction: 0.0011405999539420009 seconds
+Total time for model to make a prediction: 0.38743220001924783 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.40420800005085766 seconds
+Total time between frame received and prediction: 0.001208700006827712 seconds
+Total time for model to make a prediction: 0.3996440999908373 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3817393999779597 seconds
+Total time between frame received and prediction: 0.0012927999487146735 seconds
+Total time for model to make a prediction: 0.37723980005830526 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3865872999886051 seconds
+Total time between frame received and prediction: 0.0011550000635907054 seconds
+Total time for model to make a prediction: 0.38219560007564723 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.38022429996635765 seconds
+Total time between frame received and prediction: 0.0009972000261768699 seconds
+Total time for model to make a prediction: 0.3758041999535635 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.370630000019446 seconds
+Total time between frame received and prediction: 0.0013923000078648329 seconds
+Total time for model to make a prediction: 0.3665071999421343 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3351756000192836 seconds
+Total time between frame received and prediction: 0.0012188999680802226 seconds
+Total time for model to make a prediction: 0.33130820002406836 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.350829100003466 seconds
+Total time between frame received and prediction: 0.0012252000160515308 seconds
+Total time for model to make a prediction: 0.3463033000007272 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3866606999654323 seconds
+Total time between frame received and prediction: 0.0016355999978259206 seconds
+Total time for model to make a prediction: 0.3815885999938473 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.384360000025481 seconds
+Total time between frame received and prediction: 0.0013435999862849712 seconds
+Total time for model to make a prediction: 0.3797779999440536 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.37359649990685284 seconds
+Total time between frame received and prediction: 0.001575100002810359 seconds
+Total time for model to make a prediction: 0.3692956001032144 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3062987000448629 seconds
+Total time between frame received and prediction: 0.0008666000794619322 seconds
+Total time for model to make a prediction: 0.30330639996100217 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3058634999906644 seconds
+Total time between frame received and prediction: 0.0010420000180602074 seconds
+Total time for model to make a prediction: 0.3018299000104889 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3393760999897495 seconds
+Total time between frame received and prediction: 0.0009417000692337751 seconds
+Total time for model to make a prediction: 0.33533349994104356 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.32660219992976636 seconds
+Total time between frame received and prediction: 0.0011097999522462487 seconds
+Total time for model to make a prediction: 0.32224250002764165 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3198201999766752 seconds
+Total time between frame received and prediction: 0.001373699982650578 seconds
+Total time for model to make a prediction: 0.3152933999663219 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.31883560004644096 seconds
+Total time between frame received and prediction: 0.0008397999918088317 seconds
+Total time for model to make a prediction: 0.3149573999689892 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.4990385000128299 seconds
+Total time between frame received and prediction: 0.0012746999273076653 seconds
+Total time for model to make a prediction: 0.4944059000117704 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.3118015000363812 seconds
+Total time between frame received and prediction: 0.0012196000898256898 seconds
+Total time for model to make a prediction: 0.3081951999338344 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.32353509997483343 seconds
+Total time between frame received and prediction: 0.0015068999491631985 seconds
+Total time for model to make a prediction: 0.3184710999485105 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.34052699990570545 seconds
+Total time between frame received and prediction: 0.001436399994418025 seconds
+Total time for model to make a prediction: 0.3357053000945598 seconds
+Model Prediction: [2.]
+
+Total time for whole loop: 0.32595530000980943 seconds
+Total time between frame received and prediction: 0.0012608999386429787 seconds
+Total time for model to make a prediction: 0.32179469999391586 seconds
+Model Prediction: [0.]
+
+Total time for whole loop: 0.3059378999751061 seconds
+Total time between frame received and prediction: 0.001146299997344613 seconds
+Total time for model to make a prediction: 0.30163440003525466 seconds
+Model Prediction: [0.]

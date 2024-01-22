@@ -1,0 +1,623 @@
+Michelle and I met with Dr. Catia Silva to discuss our project. She gave advice about the ML implmentation.--8-25-23    ~ 45 minutes
+
+I reviewed an reorganized my work from Design 1. I created a new Anaconda(python virtual environment) for    
+work going forward. Overall, more organized.  ---------------------------------------------------------------8-27-23    ~ 1 hour
+
+I experimented and started on the image preprocessing for the ML model. I sought to understand exactly
+the type of data transformation I was conducting. I am making sure they work as I intened them to.  ---------8-28-23    ~ 1 hour
+
+Team met to discuss future plans. We made plans to expand the physical size of the robot. New piecies
+will be 3D printed. We will also use James' motor controller PCB from his club. A redesign of the 
+dust-pan motion will be necessary.  -------------------------------------------------------------------------8-29-23    ~ 45 minutes
+
+
+I installed the IntelReal Sense SDK in order to view the camera. It took longer than expected to setup. 
+I initially setup the wrong version. ------------------------------------------------------------------------8-31-23    ~ 30 minutes
+
+I worked further on the ML model, mostly more preprocessing research. Also, I spent a long time fixing a
+dependency problem for opencv. I ultimatly uninstalled opencv with the Conda package manager. I then had 
+to reinstall it with pip. The differences is these package manager was enough to solve the problem 
+Also this time included setting up a python environment for my work done in Design1. The old environment
+was lost because it only existed on HiperGator. I no longer have access to that account. --------------------8-31-23   ~ 5 hours
+
+I recreated my anaconda environment for my yoloV5 ML model from Design 1. That code now is able to run
+locally on my machine. Before, it only ran on HiperGator. I had problems creating the environment. Instead
+of installing dependencies using Conda package manager, I resorted to using PiP. Conda has a reputation of
+being more stable, but for now it worked using PiP. More work is needed to rerun the old code. File 
+structure and some function's code need to be adjusted. -----------------------------------------------------8-31-23   ~ 45 minutes
+
+Continued work on preprocessing. I first organized the new photos and labels that Jorge sent me. I changed
+some of the file structure: made absolute paths instead of relative. I created a function for creating 
+portions of the entire data matrix: a secondary function needs to be written. I debugged some of the code
+that used Pillow for bounding box drawing. I did further research on my next steps in preprocessing.
+I prepared questions for my next meeting with Dr. Silva -----------------------------------------------------9-1-23   ~ 2 hours 
+
+
+I was preparing more for my meeting with Dr. Silva. I reviewed my notes about Support Vector Machines.
+I then had my meeting with Dr. Silva. It was very helpful, she answered many of questions. As a result,
+I was able to train my first classification SVM model. It performed 70% accurate. For SVM, a seperate model 
+for drawing the bounding box requires a seperate SVM model. I did not create this model yet. We also 
+discussed other possible options for integrating my model(s) with the robot. I am now also confident to 
+be able to finetune my SVM models. I know where to look and what to do.  ------------------------------------9-1-23   ~ 4 hours
+
+I taught Jorge the basic theory of ML and my ML model. I then explained how he could help me to write 
+helper functions. In the future he can also help me fine-tune the ML model ----------------------------------9-6-23   ~ 1.5 hours
+
+I suceeded in storing the trained SVM model to a .pkl file (using dill library). Before, the model needed
+to be trained each time a prediction was executed. With the model stored to a file, it can be loaded and
+immediatly be used for predictions. I also attempted to change package managers from conda to mamba, but
+I ran into some bugs. I thought it could a quick process but I did not succeed. Still this is a priority
+because mamba is much faster than conda.  -------------------------------------------------------------------9-6-23   ~ 2.5 hours
+
+Team meeting. We discussed our goals for the alpha build as well as for beta build. Specifically, we 
+finalized our decision to switch to the UP^2 board instead of the Raspi 4. We also talked about how 
+we planned the future behavior of the robot: microcontroller code, trash pickup decision. We decided
+on which parts should be kept as is, which should be 3-D printed. I explained the goals and direction
+of my develoment of the ML model.  --------------------------------------------------------------------------9-7-23   ~ 45 minutes
+
+
+Registered for HiperGator access, logged into the server via ssh. I also updated some minor code for
+the training file: I made sure I could run prediction on a single image(frame).  ----------------------------9-7-23   ~ 45 minutes
+
+I attempted to try and run my ML code on the UP^2 board. First, I tried to make a miniconda virtual 
+environment for my python dependencies, but I could not get miniconda to build properly. I then decided
+to use python's native virtual environments called venv. After asking Carston for help, I was able to set 
+up a python venv on the UP^2 board. But, I still have not yet tested my code. -------------------------------9-8-23  ~ 2 hours 
+
+I ran and verified that my ML code could run on the UP^2 board. There were no dependency problems, unlike 
+trying to run my code on the Raspberry PI. I ran into problems trying to use python's venv. For some reason,
+python libraries were being installed on the global path instead of inside the venv. I may need to figure out
+this problem in the future. I recorded a video of it running on the UP^2.  ----------------------------------9-8-23  ~ 1.5 hours
+
+Completed HiperGator training course.  ----------------------------------------------------------------------9-9-23  ~ 30 minutes
+
+I tried implementing a second ML model for predicting the bounding boxes. However I ran into bugs when 
+trying to use Support Vector Machine regression. I spent time trying to fix bugs, but further research 
+is needed. I also spent time reorganizing code, tyring to understand some edge behavior of the model
+and experimenting with Hipergator since I now have access.  -------------------------------------------------9-10-23 ~ 2.5 hours 
+
+TOTAL CUMULATIVE HOURS FOR ALPHA BUILD ============================================================================== (27.75 hours)
+
+I met with Dr. Silva and interviewed for my HiperGator allocation. Both were roughly 30 minutes. I also 
+spent time preparing for my meeting with Dr. Silva. I researched Multi-Layer-Perceptron and 
+Convolutional_Nueral_Networks. In the meeting she explained the best way to fix my problem with SVM
+regression. She also suggested good hyperparameters to use and why they are applicable for MLP and
+CNN models. I will experiment with these different models to find the best model. ---------------------------9-12-23 ~ 3.25 hours
+
+Implemented a SVM regression model using advice from last meeting with Dr. Silva. I was also able 
+to test the simple performace of this model using the test set. In this test set, the bounding 
+boxes predicted were off by ~300 pixels on average. Further refinement obviously needs to be done. 
+I did some peer-programming with Jorge. We worked on doing some conducting some alpha testing for the
+ML model: live prediction using webcam. We could not get results, spent time mostly fixing library
+related errors. Jorge will continue to work on his own to see if he can complete some testing. 
+Finally, Jorge and I discussed what Carston, James and he talked about yesterday relating to the
+new hardware motor driver setup.  --------------------------------------------------------------------------9-13-23 ~ 3.5 hours 
+
+Team meeting to discuss slight changes to the trash pickup mechanism, battery 
+power supply system changes, cchanges made to the motor drivers, and final 
+software architecture ------------------------------------------------------------9-19-23 ~ 1 hour
+
+Team meeting with Jorge, James, and I. Carston showed us his small battery 
+tester and buck converter board he built/soldered. We can use it to 
+break off voltage from the battery. Find or but some old 'barrel' 
+connector to accomplish this. I also helped them perform hardware testing
+on the DC motors for the wheels and the servo motors for the trash
+mechanism. One of the DC motors performed poorly, (wiring problem?) ,
+while all other motors passed the basic tests of moving using simple
+code. Jorge will work on a simple PCB to replace the bread board wiring
+between the Teensie and Stepper Featherweight board. The board will just
+have traces connecting them and female headers to plug them in.  ----------------------------------------------------------------------------9-20-23 ~ 2 hours 
+
+Jorge and I addressed the reason why one of the DC motors performed
+poorly. The reason was because the sample code that ran on the Tensie 
+was outputting too much voltage for the wheels to handle: the motor was
+fine, but the tracks would slip off the spokes very easily at high speeds.
+We verified this using the lab power supply as well as modifiying the sample
+code provided to output a lower voltage. We found that roughly 3 volts was
+slow enough to prevent slippage and still operate with our intented goals -------9-20-23 ~ 1 hour
+
+After Jorge performed the alpha tests for my ML model on his laptop, I 
+expected it to be easy to transfer the model onto the UP-Squared board. 
+However, the code the code for my model was written in python while ROS is
+running in C++. Since my ML model was store in python format, it cannot 
+be easily exported and loaded into C++ code. Solutions involve using
+something called 'cython' or writting the code for the ML model and 
+storing it entirly in C++. Time was spent researching this. ---------------------9-21-23 ~ 1 hour
+
+I researched creating a new model based on a Multi-Layer-Perceptron,
+Cluster-Neural-Network architecture. I have created a model like this
+for my ML class, but I needed to review my notes. This architectures
+allow for easy fine-tuning, Python to C++ support, maybe
+increased accuracy, and potentially smaller model sizes -------------------------9-21-23 ~ 3 hours
+
+I first met with James and Michele and discussed progress with the
+trash-pickup mechanism and implementation of SLAM. I then helped
+James start the long process of implementing SLAM. A majority of
+the time was spent taking measurments and using them to create a 
+.UEF file. With that file created, we were able to simulate the 
+robot in ROS Gazebo. The final goal will be to use the LIDAR to
+map the lab room. Inside Gazebo we should be able to see the mapped
+lab room obstacles (tables, walls, chairs). Then finally, we could
+issue a command to move to a particular location in Gazebo which
+would translate to a real location in the room. --------------------------------9-25-23 ~ 3 hours
+
+I finished setting up my workspace in HiperGator. On Hipergator
+I will train the new MLP/CNN model. I needed change multiple
+configuration files and learned how to properly submit a 
+request to run Jupyter Notebook on Hipergator. I encountered 
+a bug where my Jupyter Notebook continusly was crashing. 
+I messaged tech support. The problem was that I was using 
+the default allocation for RAM(700 MB). I needed to explicitly
+allocate proper RAM. I overlooked RAM; I properly allocated CPU and
+CUDA GPU ussage, but forgot RAM on the request form. --------------------------9-26-23 ~ 3 hours
+
+I helped Natalie, Michele and James assemble the robot for the
+first time. We discussed how to best it. We also asked Carston
+for advice. It moved on its own (battery power), but the limiting
+factor is the threads: they are poor quality. Michele is investigating
+ways to fix the track threads coming loose, or potentially buy new 
+track-thread-wheels. ----------------------------------------------------------9-26-23 ~ 1 hour
+
+I prepared for my meeting with Dr. Silva (my ML professor). She 
+answered many of my conceptual questions about creating an MLP/CNN
+model. I am almost ready to train the first iteration of the model.
+I need to adjust a preprocessing function and other minor code changes
+first. ------------------------------------------------------------------------9-26-23 ~ 3 hours
+
+I succesfully trained an MLP/CNN model using tensorflow on HiperGator.
+It is 100% overfitting, causing 67% accuracy in the test set. I know
+strategies mitigate this bad performance. Time was spent experimenting
+and researching the correct way to input the data to the neural network.
+I wrote a new function to handle an additional preprocessing step that
+was required. I also did some brief and simple experiments to fine-tune 
+the model. Initial training runs performed even worse: 20-50% accuracy
+in the test set. More thorough model fine-tuning is required. I also was
+able to store(save) the model file. It is currently 100MB.  ------------------9-28-23 ~ 3 hours
+
+<<<<<<< HEAD
+Meeting with the team. I also helped setup Ubuntu on the laptop
+Carston gave us. This laptop will be used in place for the new
+UP-Squared board until it arrives. We discussed how the laptop
+will sit on top of the new robot chasis. -------------------------------------10-3-23 ~ 1.5 hours
+
+I worked on converting the python MLP/CNN model to a c++ readable
+format. I ran into many problems. I discovered that the API I used
+to create my model is not very stable: I need to recreate it another
+way in python first before I can even convert it to c++ format. 
+I tried to follow a tutorial for setting up TensorFlow c++, but I 
+could not get the demo code to link properly: other people had this
+problem with the tutorial. I need to do more research. -----------------------10-3-23 ~ 3 hours
+=======
+I worked towards saving my MLP/CNN model in c++ format. I needed to
+spend time researching the best way to do it: there are many ways
+to save a tensorflow model. The documentation I found also confused
+me: older documentation and videos showed different names for the 
+same thing. I was interrupted by the UP-Squared Emergency.  -------------------9-29-23 ~ 2 hours
+
+I helped debug and address the UP-Squared emergency. We spent time
+trying to recover the OS from the Grub-Recovery menu. Eventually,
+we gave up. We decided to reinstall the Ubuntu OS. But as of 
+writting, the install is taking 1 hour. The supposed estimate time
+should only take 30 mins. There still may be an underlying problem
+with the UP-Squared board, rendering it useless. -------------------------------9-29-23 ~ 2 hours
+
+Team meeting to discuss the new chasis, UP-Squared troble-shooting
+and the beta build. The UP-Sqaured seems damaged beyond repair.
+Strategies to work around the bad harddrive failed. We ordered a
+new UP-Squared Board. In the meantime, Carston provided us a
+small ChromeBook that will take its place. The laptop will
+sit on the robot instead. I helped setup Ubuntu 20.04 on the
+laptop. We had to trouble-shoot for a while to actually get it to
+install. Currently, James was able to install ROS2 and other apps
+onto the laptop. --------------------------------------------------------------10-3-23 ~ 2 hours
+
+I worked more on trying to make a C++ compatible model. I tried
+to follow a tutorial to setup TensorFlowLite (C++ version of 
+TensorFlow), but the demo code would not link to the libraries 
+properly. I discovered other people who watched the tutorial 
+had the same problem. I need to do further research.
+I also discoverd that the functional API that I used for building
+my CNN/MLP model in python is unstable for loading and saving models.
+I used the Sequential model building API, I need to use the Class API
+instead. Even in python, I could not load my saved model: it would
+endlessly run. ----------------------------------------------------------------10-3-23 ~ 2 hours
+
+I fixed the problem of trying to load my saved model. It was actually
+a very simple problem: I seemingly was out of memory on HiperGator. 
+I had to close the MLP_Training_Model.ipynb, freeing its memory. 
+This allowed me to then load the Model file (MLP_CNN.keras) in 
+another notebook. I spent time researching the functional API. 
+While I did not need to use it to solve my problem, that time 
+spend may still be useful: I may need to revisit it later. -------------------10-4-23 ~ 2.5 hours 
+
+I succesfully was able to compile the Tensorflow-Lite(C++) library
+on Ubuntu 20.04 OS. I converted my MLP/CNN Tensorflow model to a
+Tensorflow-Lite model. I ran the demo C++ code to ensure that the
+C++ model could be read correctly. However, there are few tutorials
+or easy to read documentation on how to write C++ code for 
+Tensorflow-Lite. I spoke to James, he said the python version 
+and overall python code may be sufficient. The idea to use C++ code
+was when we were trying to use the much less powerfull Raspberry PI. 
+I may revisit Tensorflow-Lite in the future if I need to ---------------------10-6-23 ~ 2 hours
+
+I worked with James to integrate my older SVM ML model into his
+ROS code running on the temporary Laptop(still waiting on new 
+UP-Squared). It ran fairly fast and was able to detect the lighter.
+For now, it could serve as a place-holder ML model. I do not want 
+to use the SVM technique to create my final model. ---------------------------10-6-23 ~ 0.5 hours
+
+I prepared for my Meeting with Dr. Silva. I researched ways to 
+mitigate overfitting on my current MLP/CNN model. Unfortunatly she
+had to reschedule. I spoke to Cole about my ML concerns and he actually 
+gave good advice: introduce artifical training images. I researched 
+Keras Library implementation of data augmentation. New images are created
+from existing images, but they are rotated, zoomed, contrast changed, etc. 
+I did not get to implementing it yet, I ran out of time that day. ------------10-9-23 ~ 3.5 hours
+
+I helped James verify code for the DC motors (wheel motors). I also 
+spent time downloading the CUDA toolkit for my local computer. With it
+installed, I can use my computer's GPU to train ML models instead of the
+CPU. My GPU is relatively powerful: when I am stuck in the queue for 
+HiperGator, I can do some local development. Unfortunatly, I ran into 
+some bugs in the setup. I will continue to work on it. -----------------------10-9-23 ~ 1.5 hours
+
+I resolved my errors with installed CUDA toolkit. The performance when
+training my MLP/CNN locally was actually much better than expected, 
+almost comparable to HiperGator. The GPU usage for training makes a 
+huge difference. With CUDA setup, local development will be much 
+faster and easier. -----------------------------------------------------------10-10-23 ~ 1.5 hours
+
+I implemented image augmentation and retrained my MLP/CNN model.
+Accuracy improved by roughly 15% (60-75%). It may even go a little
+higher because I ran out of training time on HiperGator: the 
+accuracy did not stagnate. I will retrain it tommorow for longer to
+see the results. Time was spent fine-tuning the image augmentation 
+techniques: some are applicable and others are not. --------------------------10-10-23 ~ 3.5 hours 
+
+
+TOTAL CUMULATIVE HOURS FOR BETA BUILD ====================================== (27.75 hours from Alpha, 55.25 hours frmo Beta = 83 GRAND TOTAL )
+
+I met with Dr. Silva. She gave me an idea about using Computer Vision
+instead of ML. It involved using the library skimage. A filters would be 
+used to contrast the trash object on the white floor. Another filter is 
+used to fill in the black dots on the floor to also not confuse that an object
+is trash. Then, the location where there is a density of pixels of differnet 
+color (trash) could be found. ------------------------------------------------10-18-23 ~ 2 hours
+
+I spent time researching if Ubuntu 20.04 could be downloaded onto the
+new BeagleBone AI board. There was no exact Ubuntu image that was compatible
+with the particular ARM chip (Cortex). There did exist something called 
+"Ubuntu Core 20" which may be similar to standard Ubuntu 20.04, but I did
+not attempt to flash and download this OS. It will likely still be not the 
+exact OS necessary to run ROS2: likely problems will arise and won't be 
+worth it. I left the board as is. --------------------------------------------10-20-23 ~ 2 hours
+
+I wrote a script to take photos from a video stream. I tested it with my 
+webcam and was able to take roughly 1000 photos with computer being 
+wheeled around on a dolly. These photos are not ideal, as they are taken
+at an angle that will not be similar to what the camera will see on the 
+actual robot: the angle is too high. However, in ML there is almost no 
+such thing as bad training photos. The best photos are still to be taken
+while running the script within ROS2 and using the camera situated in its
+final position. --------------------------------------------------------------10-23-23 ~ 2 hours
+ 
+
+Today, we took 750 pictures with the Intel Real-Sense camera that was 
+connected to the robot. I integrated my script code I wrote yesterday
+into the ROS2 code. I needed to do this because the Intel Camera data
+can only be accessed via a ROS node. There were some simple 
+bugs that needed to be addressed. Eventually, the code worked. We drove
+the robot around and saved images while it went. -----------------------------10-24-23 ~ 1.5 hours
+
+I worked more on training the Regression model(bounding box detection).
+It is exhibiting weird behavior. I plan to talk to Dr. Silva about best
+practices to train a Regression model, since I am little confused in 
+some areas of the architecture. In general I also cleaned up the 
+repository on Hipergator by making it up to date with the main 
+branch. ----------------------------------------------------------------------10-25-23 ~ 1.5 hours
+
+I fixed one small bug on my for Regression model. It did not solve
+the overall problem of poor training, but I at least know that the
+"Warning" Tensorflow as throwing before was not the issue. I also 
+spent some time preparing the tensorflow model to be exported to the
+Raspberry PI/Ubuntu environment. ---------------------------------------------10-26-23 ~ 1.5 hours
+
+I spent time trying to train my Regression model. I fixed more errors.
+Before during training, the accuracy was getting stuck at the same value
+without improvment. I found out that I was using a Classifer metric for 
+accuracy("accuracy" and "Gradient Descent") instead of a Regressor metric.
+I changed to "Mean Squared Error". Now the, the accuracy now improves 
+slightly, but there is still a large amount of error. I will do some more 
+research and ask my ML professor Dr. Silva for more help. If everything 
+fails, I plan to use an off the shelf library for object detection. ---------10-26-23 ~ 0.5 hour
+
+I worked more on trying to get my model ready to be used inside the 
+ROS2 architecture. I was verifying my first MLP/CNN model by calling
+predict() on the train and test sets. I thought it was performing 
+poorly, but I wrote a another script: "simpleLiveTest.py" to verify 
+the accuracy using a live webcam. In informal testing, it performed 
+better than my old SVM type model, even though the same exact 
+pictures were used for training. The best model is still to come (
+using the new photos I took from the IntelReal Sense) -----------------------10-26-23 ~ 1 hour
+
+With James, I was able to succesfully integrate my MLP/CNN model 
+into the ROS2 architecture. This model was a relativly old model 
+that used my old Design 1 pictures It still performed better in 
+every way in comparisson to the SVM type model. It is faster, 
+takes up less space and performes better. -----------------------------------10-30-23 ~ 1 hour
+
+In order to understand how the new training photos are better than
+the older ones, I trained three classifier models that are slight 
+variations of each other. I varied input image resolution, and
+the type of photos used. At least two more models will soon be trained.
+They can easily be integrated into the ROS2 architecture since I 
+proved earlier today that everything ran with one model already. -----------10-30-23 ~ 2.5 hours
+
+I prepared for my meeting with Dr. Silva today. She helped me 
+understand the problems I was having with my regression model. 
+There actually weren't as many problems as I expected. Most 
+importantly, she reminded me that I needed to normalize my 
+lablel data as well. Since I wasn't normalizing it, the error
+I was recieving was difficult to interpret. Now I can more 
+easily interpret the training process. I also further worked 
+on visualizing the final bounding boxes. Through Dr. Silva
+I found easier ways to do it through opencv. Overall, I have 
+more confidence to develop me regression model. ---------------------------10-31-23 ~ 2.5 hours
+
+I spent time implementing the suggestions that Dr. Silva
+gave for my regressor model. I Also spent time trying
+to fix a bug related to drawing the bounding boxes. At 
+the end of the meeting with Dr. Silva, she tried to 
+help me fix it, but we ran out of time. Ultimatly, 
+I was struggling to get all data types in the same 
+format. Eventually I could convert everything to 
+Pillow and OpenCV format to plot the images with 
+bounding boxes. I then could do some preliminary 
+training. ---------------------------------------------------------------- 11-1-23 ~ 2 hours
+
+I helped James and Jorge with brainstorming why some
+of the motors were working intermittantly. We 
+tried to think of ways the PCB may be damged or 
+that some of the wires were lose. We tried to fix
+the PCB becaues we discovered a broken trace. When 
+we tried to bypass the trace with a soldered 
+bread-board wire, the Feather Motor Board blew
+up. ---------------------------------------------------------------------- 11-1-23 ~ 1 hour
+
+Most of the day was spent fine-tuning the new 
+regressor model. First I had diagnose and fix a
+problem where training data and labels did not 
+match. This is a huge problem because training 
+would never be accurate. The problem was because 
+python (seemingly ) randomly reads items from 
+a directory. The solutions was to sort the 
+directory names in a list before I actually 
+accessed the files. Another error was that a
+performance metric "Intersect over Union" would
+cause the entire training process to fail. I 
+tried to correct it, because it is an important
+metric. However, replacing for "MSE" metric 
+was the only solution I could find.-------------------------------------- 11-2-23 ~ 3 hours 
+
+I tried to integrate my newly trained 
+regression model onto the robot, however I
+could not. Debugging in ROS python is very 
+difficult as there is limited access to 
+print statments. I could get the model to 
+work on HiperGator, so there was something
+simple I was overlooking. ---------------------------------------------- 11-2-23 ~ 2 hours
+
+I wrote a script to load my new regression
+model and call predict() using webcam images.
+I found the reason why I could not integrate
+the model into ROS yesterday. I was missing 
+slight syntax that could compile but was 
+failing at runtime. Basically, the bbox 
+array had an additional dimension that I
+did not expect. I was simply mising "[]"
+on one line. I was then able to integrate the 
+model for the demo video.----------------------------------------------- 11-3-23 ~ 2 hours
+
+TOTAL CUMULATIVE HOURS FOR RELEASE CANIDATE ====================================== ( 28 HOURS )
+
+ (  27.75 hours from Alpha, 55.25 hours from Beta, 28 hours from R.C = 111 GRAND TOTAL  )
+ 
+ ===============================================================================================
+ 
+ I trained a new model with the top third of
+ the images cropped. This resulted in greater
+ bounding box detection and accuracy. I spent
+ most of the time debugging a problem of the
+ architecture training. It turns out that it
+ was some weird memory error when I reran 
+ jupyter cells. When I restarted hypergator,
+ which reset my memory, it ran perfectly. 
+ From now on, I am being very cautious of how
+ my memory is being stored and will restart 
+ hypergator everytime after each training 
+ session, instead of trying to train 
+ multiple iterations at once. This is not
+ an ideal solution, but it will suffice. ----------------------------- 11-15-23 ~ 4 hours
+
+I integrated my new model that crops images.
+I first tested it with my webcam to insure 
+proper syntax before trying to integrate it 
+with ROS architecture(it is always difficult
+to debug with code in ROS framework). Using
+cropped images greatly improved the model.
+However there are still problems: the bounding
+box does not draw in many general cases. And 
+also, the bounding box is not the correct size
+. The bounding box must be relativly accurate 
+so that the robot can recenter itself on the 
+object. I need to keep improving the model. ------------------------- 11-16-23 ~ 3 hours
+
+I trained a variation of the cropped model
+where I removed training pictures that had
+lighters very far away. This allowed me to 
+crop images more. I integrated it with the
+ROS framework, but did not get to compare its 
+performace to the first cropped model: James
+needed to do some work on the centering code. ----------------------- 11-16-23 ~ 1 hour
+
+Jorge and I took additional training photos. 
+This was because I had roughly 300 lighter 
+pictures and only 150 empty pictures. I took more 
+empty pictures to balence out the numbers. 
+I also took more lighter pictures. With this
+I am confident I have enough representation
+of trash or no trash pictures. In total, I
+took roughly 1000 photos, but many need to be 
+delted still. I need to process this photos. ------------------------ 11-16-23 ~ 1.5 hours
+
+I organized the new training photos I took
+last night. I deleted photos that had 
+"noise" in them. I also realized half
+of the lighter pictures I took were too
+far away. I decided not to create a copy
+of the new lighter photos. In this new directory
+I deleted all of the far away photos: I am trying
+to ensure that I have high accuracy close up and 
+training to far away photos is a very difficult 
+ML task, especially for my simple architecture. 
+I reduced from roughly 500 photos down to 250. --------------------- 11-17-23 ~ 1.5 hours
+
+In response to my discovery of last task, I 
+took more closeup training pictures, roughly
+80. I then organized these pictures as well
+by deleting pictures with "noise " in them. 
+I then sent these pictures and the 250 from 
+above to Jorge so he can draw the bounding 
+boxes for them. ---------------------------------------------------- 11-17-23 ~ 1 hour
+
+I trained a new model with the new empty-
+picture set. I also included the new augmented 
+images the Jorge helped me generate. The images 
+were flipped horizontally and had a contrast filter 
+applied to them. In total I now have 1000 training images.
+I could not use the new lighter picture set because Jorge
+was  still working on drawing the bounding boxes 
+for them. I did not deploy it to the robot but it 
+seemed to perform faily well on the test set. ---------------------- 11-17-23 ~ 1 hour
+
+I met with Dr. Silva for a last meeting. I spent 
+time preparing for the meeting. She explained
+that my augmented images I was using were not
+a good idea to use. This is because the images
+generated are not sufficiently different to the
+origional images. They would likely cause over-
+fitting of the model. I agreed with her. She 
+also recommended regularizers I could use for 
+my architecture layers. She also explained
+that I could use rotated augmented images when
+I thought that they might break my model. She 
+convinced me they wouldn't. She also reccomended
+ways I could adapt James' control algorithm to
+center the robot on my bounding boxes. ----------------------------- 11-17-23 ~ 1.5 hours
+
+I brainstromed with Jorge the multiple ways
+I could fine-tune my model. I then trained a
+model with the new lighter and new empty pictures
+together (removed the 250 augmented images). Overall,
+the number of training images remained around 1000.I 
+integrated this new model and tested it with the
+robot's camera. It performed poorly. I need to 
+fine-tune the model more. ------------------------------------------ 11-17-23 ~ 1 hour
+
+I have too many long-distance lighter pictures.
+My Model performed poorly with up close images: 
+these shoud be the easiest to detect, yet it 
+always fails. Because there are so many long-distance
+photos, some cases the model performed better 
+with a farther away lighter than upclose. As a
+result, I made a subset of my new lighter pictures
+in a new directory. Inside included only very close
+up pictures of lighters. I want to at least ensure
+that I can detect a lighter up close. ------------------------------ 11-17-23 ~ 0.5 hours
+
+After I created the new directory of lighter pictures
+(now only 250 in total), I realized I probably need
+to look again at my new empty pictures (500). I realized
+that many of the photos were duplicates inside: this is
+horrible for training because diverse pictures are 
+required. I then spent time deleting many of the photos.
+I found that roughly only 150 were usuable. I was tired
+at this point, so this task took longer than usual. ---------------- 11-17-23 ~ 1 hour
+
+I then trained a new model with only the close-up 
+lighter pics and reduced empty pics. I integrated the
+model onto the robot. The model failed miserably again. 
+It could not detect a lighter at all still. I found that
+it could roughly detect some objects in front of the camera:
+shadow from a cupped hand on the floor and pair of pliers.
+The model is still not good enough. -------------------------------- 11-17-23 ~ 1 hour
+
+I chose to use the YoloNAS object detection API for
+my last model since my custom model is not strong 
+enough. NAS stands for Neural Architecture Search and
+has a very robust augmentation strategy and sweeps 
+through many hyperparameters to create variations 
+in architecture layers. I spent time doing research on 
+other APIs also like Tensorflow object detection, and YoloV8.
+YoloNAS showed to have the best performace and seemed
+to be very likely compatible with ROS2 architecture. 
+It was not a gurantee, but I have to take the risk. ----------------- 11-19-23 ~ 1.5 hours
+
+I organized all my training and test photos in the
+format that YoloNAS expects. This involved combining
+all photos for training into one directory. Before
+I had them split up because files had the same name.
+I spent time running console commands to rename and
+move files in bulk to the neccesary folders. ------------------------ 11-20-23 ~ 2 hours
+
+I instantiated the YoloNAS framework with my training
+files and trained a model with the "super-gradients"
+library. This library encapsulates Yolo and its
+underlying pytorch frameworks so the number of lines
+of code is reduced. ------------------------------------------------- 11-20-23 ~ 1 hour
+
+I wrote a python script to test my newly trained 
+YoloNAS file. I spent time trying to make sure
+I could call predict() properly on an OpenCV 
+video frame object. In the script, I converted
+the bounding box coordinates from floats to int.
+Overall I had to reserach the yoloNas API to 
+understand its predict() method. It took me 
+time to understand how to get the bounding 
+box coordinates from the object that is returned. ------------------- 11-20-23 ~ 0.5 hour
+
+Before installing the yoloNAS framework onto
+the robot's computer, I verified how to best
+install it (correct version) based on the 
+robot's current install version of python. 
+A lot of trail and error was needed. My attempts
+were initially failing and I was worried, but 
+I realized that I was testing dependencies in
+a Windows environment on my computer. I loaded
+my Ubuntu OS and was able to correctly load
+YoloNAS with similar dependencies that are 
+on the robot. A lot of time was wasted trying
+to force dependencies to work in a Windows 
+environment. -------------------------------------------------------- 11-20-23 ~ 1.5 hours
+
+I integrated my yoloNAS model onto the robot.
+Time was spent debugging some dependency issues.
+I had to delete all possible pip install dependencies
+then reinstall them after I made a mistake. Nonetheless,
+the model works on the robot and draws bounding boxes
+extremely well in many environments. The model is 
+very robust in all scenarios. Time was spent integrating
+the code I had locally from the python script. ---------------------- 11-20-23 ~ 2 hours
+
+
+TOTAL CUMULATIVE HOURS FOR PRODUCTION RELEASE ============================== ( 26.5 hours)
+
+(  27.75 hours from Alpha, 55.25 hours from Beta, 28 hours from R.C, 26.5 hours from P.R = 137.5 GRAND TOTAL  )
+ 
+ ===============================================================================================
+ 
+ 
+
+
+
+
